@@ -1,0 +1,585 @@
+/* Reset box-model
+   ========================================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+/**
+ * IE10+ doesn't honor `<meta name="viewport">` in some cases
+ */
+
+@-ms-viewport {
+  width: device-width;
+}
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Prevent adjustments of font size after orientation changes on some mobile devices.
+ * 2. Remove gray overlay on links for iOS.
+ * 3. Force a non-overlapping, non-auto-hiding scrollbar to counteract @viewport being set,
+ *    which causes scrollbars to overlap content in IE11 and Edge
+ * 4. Set explicit initial text-align value
+ *    so the `inherit` value can be used later on things like `<th>` elements
+ * 5. Correct the line height in all browsers.
+ */
+
+html {
+  -ms-text-size-adjust: 100%; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 1 */
+  -webkit-tap-highlight-color: transparent; /* 2 */
+  -ms-overflow-style: scrollbar; /* 3 */
+  text-align: left; /* 4 */
+  line-height: 1.15; /* 5 */
+}
+
+/* Blocks
+   ========================================================================== */
+
+/**
+ * Fix display of HTML5 structural elements in IE10 and older browsers
+ */
+
+article,
+aside,
+dialog,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+  display: block;
+}
+
+/**
+ * Reset block margins so margin and padding are only applied when needed
+ */
+
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+table,
+address,
+form,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+/* Headings
+   ========================================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+}
+
+/* Lists (enumeration)
+   ========================================================================== */
+
+ul { 
+  list-style: none;
+}
+
+/* Lists (definition)
+   ========================================================================== */
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+  border: 0;
+  border-top: 1px solid;
+  margin: 0;
+  clear: both;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ * 3. Add explicit cursor to indicate changed behavior
+ */
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+  cursor: help; /* 3 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Reset font style and line height for `address` elements
+ */
+
+address {
+  font-style: inherit;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: inherit; /* 2 */
+}
+
+/**
+ * 1. Don't allow content to break outside
+ * 2. Force a non-overlapping, non-auto-hiding scrollbar to counteract @viewport being set, which causes scrollbars to overlap content in IE11 and Edge
+ */
+
+pre {
+  overflow: auto; /* 1 */
+  -ms-overflow-style: scrollbar; /* 2 */
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * 1. Set responsive media elements so images and embeds scale with browser width
+ * 2. Remove the border on images and embeds inside links in IE 10.
+ */
+
+img,
+embed,
+object,
+iframe,
+audio,
+video {
+  max-width: 100%; /* 1 */
+  height: auto; /* 1 */
+  border: 0; /* 2 */
+  vertical-align: bottom; /* 3 */
+}
+
+/**
+ * Hide overflow in IE
+ */
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/**
+ * Correct display for audio controls in iOS 4-7 
+ */
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* Forms
+   ========================================================================== */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  vertical-align: middle;
+  color: inherit;
+  font: inherit;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  outline: 0;
+}
+
+/**
+ * Remove all Style for select elements. Does not quite work cross-browser
+ */
+
+select {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0;
+}
+
+/**
+ * Show the overflow in IE.
+ */
+
+button,
+input {
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ */
+
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+button[disabled],
+[type='button'][disabled],
+[type='reset'][disabled],
+[type='submit'][disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Reset to invisible
+ */
+
+fieldset {
+  border: 0;
+  min-width: 0;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  color: inherit; /* 2 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * 1. Remove the default vertical scrollbar in IE 10+.
+ * 2. Textareas should really only resize vertically so they don't break their (horizontal) containers
+ */
+
+textarea {
+  overflow: auto; /* 1 */
+  resize: vertical; /* 2 */
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+[type='checkbox'],
+[type='radio'] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Remove the default appearance of temporal inputs to avoid a Mobile Safari bug
+ * where setting a custom line-height prevents text from being vertically
+ * See https://bugs.webkit.org/show_bug.cgi?id=139848
+ */
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
+  -webkit-appearance: listbox;
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type='search'] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Avoid 300ms click delay on touch devices that support the `touch-action` CSS property
+ */
+
+a,
+area,
+button,
+[role="button"],
+input:not([type="range"]),
+label,
+select,
+summary,
+textarea {
+  touch-action: manipulation;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/**
+ * Fix placeholder font properties inheritance.
+ */
+
+::-webkit-input-placeholder {
+  font: inherit;
+}
+
+:-ms-input-placeholder {
+  font: inherit;
+}
+
+::-ms-input-placeholder {
+  font: inherit;
+}
+
+::placeholder {
+  font: inherit;
+}
+
+/**
+ * Clickable labels
+ */
+
+label[for] {
+  cursor: pointer;
+}
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Table
+   ========================================================================== */
+
+/**
+ * 1. Prevent double borders.
+ * 2. Reset table spacing so tabular data only takes the space it needs.
+ */
+
+table {
+  border-collapse: collapse; /* 1 */
+  border-spacing: 0; /* 2 */
+}
+
+/**
+ * 1. Move caption below table.
+ * 2. Align table caption to left (inherits from html).
+ */
+
+caption {
+  caption-side: bottom; /* 1 */
+  text-align: inherit; /* 2 */
+}
+
+/*
+ * Align tabular data to top left (inherits from html).
+ */
+
+td,
+th {
+  vertical-align: top;
+  text-align: inherit;
+}
+
+/* Miscellaneous
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+
+template {
+  display: none;
+}
+
+/**
+ * Always hide an element with the `hidden` HTML attribute (from PureCSS).
+ * Add the correct display in IE 10.
+ */
+
+[hidden] {
+  display: none !important;
+}
